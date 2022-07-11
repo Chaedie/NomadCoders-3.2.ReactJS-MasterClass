@@ -1,11 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const rotateAnimation = keyframes`
@@ -47,9 +52,8 @@ const Box = styled.div`
 function App() {
   return (
     <Wrapper>
-      <Box>
-        <Emoji as="span">🤣</Emoji>
-      </Box>
+      <Title>Hello! Dark Mode</Title>
+      {/* <Box><Emoji as="span">🤣</Emoji></Box> */}
     </Wrapper>
   );
 }
